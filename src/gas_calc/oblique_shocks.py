@@ -9,6 +9,8 @@ import numpy as np
 
 def max_turning_angle(gamma, m1):
 
+    # from Gas Dynamics by John Keith, eq. 6.24
+
     gp1 = gamma+1.
     gm1 = gamma-1.
     a = 1./(gamma*m1**2)
