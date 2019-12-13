@@ -392,3 +392,14 @@ class GasTables():
 
         return [theta, delta, m1n, m2n, m2, p2p1, p02p01,r2r1,t2t1]
 
+if __name__ == "__main__":
+    import gascalc.api as gc
+
+    # solve for p2/p1
+    table = gc.GasTables()
+    gamma = 1.3
+    m1 = 2.0
+    delta = 9.0
+    table.osr("tangle(weak)", gamma, m1, delta)
+    p2p1 = np.copy(table.state.p2p1)
+    print('p2/p1 = %.4f' % p2p1)
